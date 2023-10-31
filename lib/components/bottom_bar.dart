@@ -6,7 +6,6 @@ import 'package:pregnancypal/pages/profile/profile.dart';
 import 'package:pregnancypal/pages/report/report.dart';
 import 'package:pregnancypal/style/app_style.dart';
 
-
 import '../pages/home_page.dart';
 
 class BottomBar extends StatefulWidget {

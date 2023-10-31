@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pregnancypal/provider/theme_provide.dart';
 import 'package:pregnancypal/style/app_style.dart';
+import 'package:provider/provider.dart';
 // import 'package:pregnancypal/style/app_style.dart';
 
 class TopBar extends StatelessWidget {
@@ -29,19 +31,72 @@ class TopBar extends StatelessWidget {
             .headlineSmall!
             .copyWith(fontWeight: FontWeight.w700),
       ),
-      trailing: GestureDetector(
-        child: Container(
-          width: 48.0,
-          height: 48.0,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(AppStyle.dark),
-              fit: BoxFit.cover,
-              repeat: ImageRepeat.repeat,
-            ),
-            borderRadius: BorderRadius.all(Radius.circular(18.0)),
-          ),
-        ),
+      trailing: Consumer<ThemeProvider>(
+        builder: (context, provider, child) {
+          return DropdownButton(
+              icon: provider.currentTheme == 'dark'
+                  ? Image.asset(
+                      AppStyle.light,
+                      width: 30,
+                      height: 30,
+                    )
+                  : provider.currentTheme == 'light'
+                      ? Image.asset(
+                          AppStyle.dark,
+                          width: 30,
+                          height: 30,
+                        )
+                      : Image.asset(
+                          AppStyle.system,
+                          width: 30,
+                          height: 30,
+                        ),
+              underline: Container(),
+              items: [
+                DropdownMenuItem<String>(
+                    value: provider.currentTheme,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text('Dark'),
+                        Image.asset(
+                          AppStyle.dark,
+                          width: 30,
+                          height: 30,
+                        ),
+                      ],
+                    )),
+                DropdownMenuItem<String>(
+                    value: 'light',
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text('Light'),
+                        Image.asset(
+                          AppStyle.light,
+                          width: 30,
+                          height: 30,
+                        ),
+                      ],
+                    )),
+                DropdownMenuItem<String>(
+                    value: 'system',
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text('System'),
+                        Image.asset(
+                          AppStyle.system,
+                          width: 30,
+                          height: 30,
+                        ),
+                      ],
+                    )),
+              ],
+              onChanged: (String? value) {
+                provider.toggleTheme(value ?? 'system');
+              });
+        },
       ),
     );
   }

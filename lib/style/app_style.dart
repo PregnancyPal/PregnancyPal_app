@@ -4,8 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 class AppStyle {
   // App Images ..
   static const String dark = "assets/images/dark.png";
+  static const String light = "assets/images/light.png";
+  static const String system = "assets/images/system.png";
   static const String image1 = "assets/images/image1.png";
   static const String baby = "assets/images/baby.png";
+
   /// App Icons.
 
   static const String filtterIcon = "assets/icons/adjust-horizontal-alt.svg";
