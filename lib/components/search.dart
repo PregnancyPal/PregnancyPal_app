@@ -27,7 +27,7 @@ class SearchMedical extends StatelessWidget {
             child: SvgPicture.asset(AppStyle.filtterIcon),
           ),
           hintText: "Search medical..",
-          fillColor: AppStyle.inputFillColor,
+          fillColor: AppStyle.Lbackground,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(18),

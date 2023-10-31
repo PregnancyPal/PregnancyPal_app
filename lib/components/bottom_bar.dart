@@ -45,7 +45,7 @@ class _BottomBarState extends State<BottomBar> {
             activeIcon: SvgPicture.asset(
               AppStyle.homeIcon,
               colorFilter: const ColorFilter.mode(
-                AppStyle.primarySwatch,
+                AppStyle.primary,
                 BlendMode.srcIn,
               ),
             ),
@@ -56,7 +56,7 @@ class _BottomBarState extends State<BottomBar> {
             activeIcon: SvgPicture.asset(
               AppStyle.eventIcon,
               colorFilter: const ColorFilter.mode(
-                AppStyle.primarySwatch,
+                AppStyle.primary,
                 BlendMode.srcIn,
               ),
             ),
@@ -67,7 +67,7 @@ class _BottomBarState extends State<BottomBar> {
             activeIcon: SvgPicture.asset(
               AppStyle.reportIcon,
               colorFilter: const ColorFilter.mode(
-                AppStyle.primarySwatch,
+                AppStyle.primary,
                 BlendMode.srcIn,
               ),
             ),
@@ -78,7 +78,7 @@ class _BottomBarState extends State<BottomBar> {
             activeIcon: SvgPicture.asset(
               AppStyle.notificationsIcon,
               colorFilter: const ColorFilter.mode(
-                AppStyle.primarySwatch,
+                AppStyle.primary,
                 BlendMode.srcIn,
               ),
             ),
@@ -89,7 +89,7 @@ class _BottomBarState extends State<BottomBar> {
             activeIcon: SvgPicture.asset(
               AppStyle.notificationsIcon,
               colorFilter: const ColorFilter.mode(
-                AppStyle.primarySwatch,
+                AppStyle.primary,
                 BlendMode.srcIn,
               ),
             ),
@@ -98,7 +98,7 @@ class _BottomBarState extends State<BottomBar> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: AppStyle.primarySwatch,
+        selectedItemColor: AppStyle.primary,
         onTap: _onItemTapped,
       ),
     );

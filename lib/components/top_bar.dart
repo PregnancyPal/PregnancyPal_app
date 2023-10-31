@@ -47,14 +47,14 @@ class TopBar extends StatelessWidget {
                           height: 30,
                         )
                       : Image.asset(
-                          AppStyle.system,
+                          AppStyle.light,
                           width: 30,
                           height: 30,
                         ),
               underline: Container(),
               items: [
                 DropdownMenuItem<String>(
-                    value: provider.currentTheme,
+                    value: 'dark',
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

@@ -7,6 +7,7 @@ import 'package:pregnancypal/components/top_bar.dart';
 import 'package:pregnancypal/pages/Calculator/calculator.dart';
 import 'package:pregnancypal/pages/ads/get_best_medical_service.dart';
 import 'package:pregnancypal/pages/appointments/upcoming_appointments.dart';
+import 'package:pregnancypal/provider/theme_provide.dart';
 import 'package:pregnancypal/style/app_style.dart';
 // import '../data/data.dart';
 import '../size_config.dart';
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
+      // backgroundColor: AppStyle.Dbackground,
       body: ListView(
         children: [
           Padding(

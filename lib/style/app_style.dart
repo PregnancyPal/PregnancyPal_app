@@ -26,8 +26,17 @@ class AppStyle {
   static const String forthIcon = "assets/icons/event_note.svg";
 
 // App Colors
-  static const primarySwatch = Color(0xff1C6BA4);
-  static const inputFillColor = Color(0xffEEF6FC);
+
+  static const primary = Color(0xff1C6BA4);
+  static const button = Color.fromRGBO(244, 71, 8, 1);
+  static const textColor = Color(0xffEEF6FC);
+  static const Lbackground = Colors.white;
+  static const Dbackground = Colors.black;
+
+  static Color DPrimary = Color(0xFF0E4749);
+  static Color DSecondary = Color(0xFF002626);
+  static Color DTextPrimary = Color(0xFFEFE7DA);
+  static Color DTextSecondary = Color(0xFFE55812);
 
   // App Theme Data..
 
